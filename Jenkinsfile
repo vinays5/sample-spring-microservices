@@ -7,7 +7,7 @@ node ('BuildJava-MS')
 
       parameters 
     {
-           string(name: 'Service_Name', defaultValue: 'accout-service, description: 'Which service needs to deploy')
+           string(name: 'Service_Name', defaultValue: 'account-service', description: 'Which service needs to deploy')
            choice(choices: 'develop\nrelease\nfeature\nmaster', description: 'Select the Branch Name' , name: 'Branch_Name')
            choice(choices: 'Dev\nPreProd\nProd', description: 'Select the runtime environment', name: 'Server_Environment')
     }
