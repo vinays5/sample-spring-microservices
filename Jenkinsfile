@@ -22,6 +22,7 @@ node ('BuildJava-MS')
             Checkout()   //  cloning 
             Build()      // mvn clean install
             Create_Image() //docker build 
+            docker_image_push // for pushing the image 
         
             
     
@@ -53,3 +54,13 @@ def Create_Image()
         sh "cd $WORKSPACE/${params.Service_Name} ; sudo docker build --tag=${params.Service_Name} ."
     }
 }
+def docker_image_push()
+{
+      stage('image pushing')
+      {
+            sh "docker login -uankit1111 -p miet@1234"
+            sh " docker tag ${params.Service_Name} ankit1111/${params.Service_Name}:v1"
+            sh " docker push ankit1111/${params.Service_Name}:v1"
+            
+      }
+} 
