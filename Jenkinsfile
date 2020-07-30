@@ -22,7 +22,7 @@ node ('BuildJava-MS')
             Checkout()   //  cloning 
             Build()      // mvn clean install
             Create_Image() //docker build 
-            docker_image_push // for pushing the image 
+            docker_image_push() // for pushing the image 
         
             
     
