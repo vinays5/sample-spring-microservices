@@ -16,7 +16,7 @@ node ('BuildJava-MS')
     
      
       
-        if ("${BRANCH_NAME}" == 'master')
+        if ("${BRANCH_NAME}" == 'master') && ("$(Language) == java ")
        {
          
             Checkout()   //  cloning 
@@ -28,6 +28,8 @@ node ('BuildJava-MS')
     
       }
 }
+
+
 
 def Checkout() 
 {
@@ -58,7 +60,7 @@ def docker_image_push()
 {
       stage('image pushing')
       {
-            sh "sudo docker login -uankit1111 -p miet@1234"
+            sh "sudo docker login -uyourusername -pyourpasword"
             sh " sudo docker tag ${params.Service_Name} ankit1111/${params.Service_Name}:v1"
             sh " sudo docker push ankit1111/${params.Service_Name}:v1"
             
