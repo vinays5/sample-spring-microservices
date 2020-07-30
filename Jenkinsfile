@@ -16,7 +16,7 @@ node ('BuildJava-MS')
     
      
       
-        if ("${BRANCH_NAME}" == 'develop')
+        if ("${BRANCH_NAME}" == 'master')
        {
          
             Checkout()   //  cloning 
