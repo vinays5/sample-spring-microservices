@@ -60,7 +60,7 @@ def docker_image_push()
 {
       stage('image pushing')
       {
-            sh "sudo docker login -uyourusername -pyourpasword"
+            sh "sudo docker login -uankit11111 -pmiet@1234"
             sh " sudo docker tag ${params.Service_Name} ankit1111/${params.Service_Name}:v1"
             sh " sudo docker push ankit1111/${params.Service_Name}:v1"
             
