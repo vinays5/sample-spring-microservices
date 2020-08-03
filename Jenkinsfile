@@ -23,6 +23,7 @@ node ('BuildJava-MS')
             Build()      // mvn clean install
             Create_Image() //docker build 
             docker_image_push() // for pushing the image 
+            deploying_to_k8s() // for k8s deployment
         
             
     
@@ -66,3 +67,12 @@ def docker_image_push()
             
       }
 } 
+def deploying_to_k8s()
+stage('k8s deployment') {
+      node ("ansible-machine")
+      {
+            sh "cd /opt ; sudo ansible-playbook devops.yaml"
+            
+      }
+}
+}
