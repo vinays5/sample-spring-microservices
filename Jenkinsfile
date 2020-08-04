@@ -67,7 +67,8 @@ def docker_image_push()
             
       }
 } 
-def deploying_to_k8s()
+def deploying_to_k8s() {
+      
 stage('k8s deployment') {
       node ("ansible-machine")
       {
