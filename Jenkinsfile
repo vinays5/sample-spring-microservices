@@ -2,13 +2,13 @@ import groovy.json.JsonOutput
 import groovy.transform.Field
 import groovy.json.JsonSlurper
 
-node ('BuildJava-MS') 
+node ('build-machinejava') 
 {
 
       parameters 
     {
            string(name: 'Service_Name', defaultValue: 'account-service', description: 'Which service needs to deploy')
-           choice(choices: 'develop\nrelease\nfeature\nmaster', description: 'Select the Branch Name' , name: 'Branch_Name')
+           choice(choices: 'develop\nrelease\nqa\nmaster', description: 'Select the Branch Name' , name: 'Branch_Name')
            choice(choices: 'Dev\nPreProd\nProd', description: 'Select the runtime environment', name: 'Server_Environment')
     }
     
@@ -23,7 +23,7 @@ node ('BuildJava-MS')
             Build()      // mvn clean install
             Create_Image() //docker build 
             docker_image_push() // for pushing the image 
-            deploying_to_k8s() // for k8s deployment
+            //deploying_to_k8s() // for k8s deployment
         
             
     
