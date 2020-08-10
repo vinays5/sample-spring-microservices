@@ -22,7 +22,7 @@ stage ('Build1')
        sh "cd ${params.Service_Name} ; mvn clean install " 
     }
 }
-stage ('Create_Image'1)
+stage ('Create_Image1')
 {
    steps
     {
