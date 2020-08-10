@@ -23,7 +23,7 @@ node ('build-machinejava')
             Build()      // mvn clean install
             Create_Image() //docker build 
             docker_image_push() // for pushing the image 
-            //deploying_to_k8s() // for k8s deployment
+            deploying_to_k8s() // for k8s deployment
         
             
     
