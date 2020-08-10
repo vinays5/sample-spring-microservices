@@ -5,7 +5,7 @@ label 'build-machinejava'
 
 stages {
 
-stage ('Checkout') 
+stage ('Checkout1') 
 {
 steps
     {
@@ -15,14 +15,14 @@ steps
     }
     
 }
-stage ('Build') 
+stage ('Build1') 
 {
     steps
     {
        sh "cd ${params.Service_Name} ; mvn clean install " 
     }
 }
-stage ('Create_Image')
+stage ('Create_Image'1)
 {
    steps
     {
@@ -31,16 +31,16 @@ stage ('Create_Image')
 }
 docker_image_push()
 {
-      stage('image pushing')
+      stage('image pushing1')
       {
-            sh "sudo docker login -uankit1111 -pmiet@123"
+            sh "sudo docker login -uankit1111 -pmiet@1234"
             sh " sudo docker tag ${params.Service_Name} ankit1111/${params.Service_Name}:v1"
             sh " sudo docker push ankit1111/${params.Service_Name}:v1"
             
       }
 } 
 
-stage ('deploying_to_k8s') {
+stage ('deploying_to_k8s1') {
       
 steps {
       node ('ansible-machine')
