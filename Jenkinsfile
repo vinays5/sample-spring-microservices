@@ -29,10 +29,10 @@ stage ('Create_Image1')
         sh "cd $WORKSPACE/${params.Service_Name} ; sudo docker build --tag=${params.Service_Name} ."
     }
 }
-docker_image_push()
-{
+
       stage('image pushing1')
-      {
+    steps 
+    {
             sh "sudo docker login -uankit1111 -pmiet@1234"
             sh " sudo docker tag ${params.Service_Name} ankit1111/${params.Service_Name}:v1"
             sh " sudo docker push ankit1111/${params.Service_Name}:v1"
@@ -40,7 +40,7 @@ docker_image_push()
       }
 } 
 
-stage ('deploying_to_k8s1') {
+stage ('deploying-to-k8s1') {
       
 steps {
       node ('ansible-machine')
