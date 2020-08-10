@@ -31,6 +31,7 @@ stage ('Create_Image1')
 }
 
       stage('image pushing1')
+    {
     steps 
     {
             sh "sudo docker login -uankit1111 -pmiet@1234"
