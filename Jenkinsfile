@@ -19,7 +19,7 @@ stage ('Build1')
 {
     steps
     {
-       sh "cd ${params.Service_Name} ; mvn clean install " 
+       sh "cd /home/ubuntu/workspace/ ; mvn clean install " 
     }
 }
 stage ('Create_Image1')
