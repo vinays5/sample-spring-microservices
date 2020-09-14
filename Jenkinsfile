@@ -50,6 +50,11 @@ stage ('Create_Image1')
             
       }
 }
-
+post {
+    failure {
+        emailext body: ankit@gmil.com', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+    }
+}
+    
 }
 }
