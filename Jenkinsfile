@@ -41,5 +41,15 @@ stage ('Create_Image1')
       }
 
 }
+
+      stage('conatiner')
+    {
+    steps 
+    {
+            sh "docker run -it -p 8083:2222 ankit1111/account-service:v1"
+            
+      }
+}
+
 }
 }
