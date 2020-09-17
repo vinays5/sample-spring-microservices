@@ -19,7 +19,7 @@ stage ('Build1')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/Devops-102/account-service ; mvn clean install " 
+       sh "cd /home/ubuntu/workspace/build-javaJOB/account-service ; mvn clean install " 
     }
 }
 
