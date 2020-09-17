@@ -31,7 +31,17 @@ stage ('Create_Image1')
     }
 }
 
+ stage('image pushing1')
+    {
+    steps 
+    {
+            sh "sudo docker login -uankit1111 -pmiet@1234"
+            sh " sudo docker tag account-service ankit1111/account-service"
+            sh " sudo docker push ankit1111/account-service"
+            
+      }
 
+}
 
 }
 }
