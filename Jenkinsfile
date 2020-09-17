@@ -23,6 +23,15 @@ stage ('Build1')
     }
 }
 
-     
+stage ('Create_Image1')
+{
+   steps
+    {
+        sh "cd /home/ubuntu/workspace/build-javaJOB/account-service ; sudo docker build --tag=account-service ."
+    }
+}
+
+
+
 }
 }
