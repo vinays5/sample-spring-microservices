@@ -49,8 +49,8 @@ stage ('Create_Image1')
         node ('k8s-master'){
             
             
-                sh "cd /root ; kubectl apply -f k8s.yaml"
-                sh "cd /root ; kubectl apply -f k8sservice.yaml"  
+                sh "sudo kubectl apply -f /root/k8s.yaml"
+                sh "sudo kubectl apply -f /root/k8sservice.yaml"  
     
             }
         }
