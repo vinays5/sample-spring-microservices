@@ -49,7 +49,7 @@ stage ('Create_Image1')
         node ('build.javamachine'){
             
             
-              sh "sudo ansible playbook /opt/devops.yaml"  
+              sh "sudo ansible-playbook /opt/devops.yaml"  
     
             }
         }
