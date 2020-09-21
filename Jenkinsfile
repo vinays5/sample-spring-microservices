@@ -46,12 +46,10 @@ stage ('Create_Image1')
     stage ('k8sdeployment'){
         steps {
             
-        node ('k8s-master'){
+        node ('build.javamachine'){
             
             
-                sh " sudo -i "          
-                sh "kubectl apply -f /root/k8s.yaml"
-                sh "kubectl apply -f /root/k8sservice.yaml"  
+              sh "sudo ansible playbook /opt/devops.yaml"  
     
             }
         }
