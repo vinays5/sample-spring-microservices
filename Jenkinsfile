@@ -1,6 +1,6 @@
 pipeline {
 agent {
-label 'build.machinejava'
+label 'build.javamachine'
 }
 
 stages {
@@ -19,7 +19,7 @@ stage ('Build1')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/build-javaJOB/account-service ; mvn clean install " 
+       sh "cd /home/ubuntu/workspace/21stjava/account-service ; mvn clean install " 
     }
 }
 
@@ -27,7 +27,7 @@ stage ('Create_Image1')
 {
    steps
     {
-        sh "cd /home/ubuntu/workspace/build-javaJOB/account-service ; sudo docker build --tag=account-service ."
+        sh "cd /home/ubuntu/workspace/21stjava/account-service ; sudo docker build --tag=account-service ."
     }
 }
 
