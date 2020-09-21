@@ -44,9 +44,11 @@ stage ('Create_Image1')
 }
 
     stage ('k8sdeployment'){
+        steps {
+            
         node ('k8s-master'){
-            steps 
-            {
+            
+            
                 sh "cd /root ; kubectl apply -f k8s.yaml"
                 sh "cd /root ; kubectl apply -f k8sservice.yaml"  
     
