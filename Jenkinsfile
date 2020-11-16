@@ -22,5 +22,13 @@ stage ('Build1')
        sh "cd /home/ubuntu/workspace/16thnovdevopsjava/account-service ; mvn clean install " 
     }
 }
+    stage ('dockerbuild ') 
+{
+    steps
+    {
+      sh "cd /home/ubuntu/workspace/16thnovdevopsjava/account-service ; docker build -t javaimage16th . " 
+    }
+}
+    
   }
 }
