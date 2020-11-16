@@ -26,7 +26,7 @@ stage ('Build1')
 {
     steps
     {
-      sh "cd /home/ubuntu/workspace/16thnovdevopsjava/account-service ; docker build -t javaimage16th . " 
+      sh "cd /home/ubuntu/workspace/16thnovdevopsjava/account-service ; sudo docker build -t javaimage16th . " 
     }
 }
     
