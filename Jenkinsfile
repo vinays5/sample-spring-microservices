@@ -45,7 +45,7 @@ stage ('Build1')
                 sh " sudo kubectl apply -f /root/java.yaml"
             }
         }
-        
+    }   
 }
     
 }
