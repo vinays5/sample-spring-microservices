@@ -44,6 +44,7 @@ stage ('Build1')
             node ('build.javamachine') {
                 
                 sh " cd /opt ; sudo ansible-playbook k8s.yaml"
+                sh " cd /opt ; sudo ansible-playbook k8sservice.yaml"
             }
         }
     }   
