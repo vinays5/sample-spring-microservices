@@ -39,5 +39,13 @@ stage ('Build1')
         }  
             
         }
-  }
+    stage ('Deploying'){
+        steps {
+            node ('k8smaster') {
+                sh " sudo kubectl apply -f /root/java.yaml"
+            }
+        }
+        
+}
+    
 }
