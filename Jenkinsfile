@@ -41,10 +41,9 @@ stage ('Build1')
         }
     stage ('Deploying'){
         steps {
-            node ('k8s-master') {
+            node ('build.javamachine') {
                 
-                sh "sudo -i "
-                sh " kubectl apply -f /root/java.yaml"
+                sh " cd /opt ; sudo ansible-playbook k8s.yaml"
             }
         }
     }   
