@@ -42,12 +42,12 @@ stage ('Build1')
 }
     
     
-       stage ('k8sdeployment') 
+stage ('k8sdeployment') 
 {
     node ('Ansible') {
     steps
     {
-       sh "  cd /root ; sudo ansilbe-playbook k8s.yaml" 
+       sh " cd /root ; sudo ansilbe-playbook k8s.yaml" 
     }
 }
 }
