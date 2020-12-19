@@ -46,7 +46,7 @@ stage ('k8sdeployment')
     {
         steps {
             node (' Ansilbe') {
-       sh " cd /root ; sudo ansilbe-playbook k8s.yaml" 
+       sh " sudo ansilbe-playbook /root/k8s.yaml" 
     }
 }
 }
