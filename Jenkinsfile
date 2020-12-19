@@ -1,6 +1,6 @@
 pipeline {
 agent {
-label '24thdevops'
+label 'buildserevr '
 }
 
 stages {
@@ -19,7 +19,7 @@ stage ('Build1')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/28thJava/account-service ; mvn clean install " 
+       sh "cd /home/ubuntu/workspace/JnekinsPipelneDevOps/account-service ; mvn clean install " 
     }
 }
  
