@@ -26,7 +26,7 @@ stage ('Build')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/$(Service_name); sudo docker build -t account-service . " 
+        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/${Service_name}; sudo docker build -t account-service . " 
     }
 }
      stage ('dockerimagepush ') 
