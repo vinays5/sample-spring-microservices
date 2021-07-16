@@ -24,14 +24,14 @@ stage ('Build')
 }
 
    
-{
+stage ('dockerimagepusBuild')
+    {
     steps
     {
         sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/account-service; sudo docker build -t account-service . " 
     }
 }
-    }
-            stage ('dockerimagepush ') 
+     stage ('dockerimagepush ') 
 {
     steps
     {
