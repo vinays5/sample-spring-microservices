@@ -24,7 +24,7 @@ stage ('Build')
 }
 
    
-stage ('dockerimagepusBuild')
+stage ('dockerimageBuild')
     {
     steps
     {
