@@ -36,8 +36,8 @@ stage ('dockerimageBuild')
     steps
     {
        sh "cd /home/ubuntu/workspace/firstproject/account-service ; sudo  docker login -uvinay30 -pvi101251@ "
-        sh "cd /home/ubuntu/workspace/devops28thsep/account-service ; sudo docker tag account-service vinay30/account-service "
-        sh "cd /home/ubuntu/workspace/devops28thsep/account-service ; sudo docker push vinay30/account-service  "
+        sh "cd /home/ubuntu/workspace/firstproject/account-service ; sudo docker tag account-service vinay30/account-service "
+        sh "cd /home/ubuntu/workspace/firstproject/account-service ; sudo docker push vinay30/account-service  "
         
         
     }
